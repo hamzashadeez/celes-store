@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        place-items: center;
+      }
+
+      .typing-text {
+        font-family: monospace; /* Monospace is key! Every letter has the same width */
+        font-size: 30px;
+        width: 27ch; /* 'ch' stands for character. Set this to the number of letters/spaces */
+
+        white-space: nowrap; /* Keeps the text on one line */
+        overflow: hidden; /* Hides the letters until the width expands */
+        border-right: 3px solid orange; /* This creates the "cursor" */
+
+        /* Applying two animations: one for typing, one for the blinking cursor */
+        animation: typing 4s steps(27) infinite,
+          blink 0.5s step-end infinite alternate;
+      }
+
+      /* Animation 1: Expand the width from 0 to full */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+
+      /* Animation 2: Make the border (cursor) appear and disappear */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="typing-text">Hello, welcome to our class!</h1>
+    </div>
+  </body>
+</html>
