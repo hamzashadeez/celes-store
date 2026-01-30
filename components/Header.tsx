@@ -17,7 +17,7 @@ export function Header() {
       setUser(response.data?.user)
     })
     .catch((error)=>{
-      console.log(error)
+      // console.log(error)
     })
 
   }
