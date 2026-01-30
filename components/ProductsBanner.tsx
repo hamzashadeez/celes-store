@@ -1,6 +1,7 @@
 "use client";
 
 import ApiClient from "@/lib/API";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function ProductsBanner() {
@@ -19,7 +20,8 @@ function ProductsBanner() {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8">
         {/* Product items would go here */}
         {products.map((pro: any) => (
-          <div key={pro._id} className="bg-white p-4 rounded-lg shadow">
+          <Link key={pro._id}  href={`/store/product/${pro._id}`}>
+          <div className="bg-white p-4 rounded-lg shadow">
             <img
               className="min-h-40 w-full bg-gray-200 rounded mb-4"
               src="/1.png"
@@ -31,6 +33,7 @@ function ProductsBanner() {
               Add to Cart
             </button>
           </div>
+          </Link>
         ))}
 
         {/* Repeat product items as needed */}
