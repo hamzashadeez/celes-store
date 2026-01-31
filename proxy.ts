@@ -21,7 +21,6 @@ export async function proxy(req: CustomNextRequest) {
 
   try {
     const decoded: any = await verifyJwt(token);
-    console.log("decoded token:", decoded);
 
 
     if (decoded) {
