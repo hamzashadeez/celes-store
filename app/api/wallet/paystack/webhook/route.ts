@@ -49,8 +49,8 @@ export async function POST(request: NextRequest) {
         { userId: tx.userId },
         { 
           $inc: { 
-            balance: amount, 
-            ledgerBalance: amount 
+            balance: amount * 0.97, 
+            ledgerBalance: amount * 0.97 
           } 
         },
         { new: true }
