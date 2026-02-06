@@ -25,7 +25,7 @@ export async function proxy(req: CustomNextRequest) {
 
     if (decoded) {
       if (req.nextUrl.pathname.startsWith("/auth/login")) {
-        return NextResponse.redirect(new URL("/dashboard", req.url));
+        return NextResponse.redirect(new URL("/", req.url));
       }
 
       req.headers.set("user", JSON.stringify(decoded));
