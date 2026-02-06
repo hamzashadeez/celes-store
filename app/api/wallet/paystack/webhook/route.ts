@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     const payload = JSON.parse(raw);
 
     const signature = request.headers.get("x-paystack-signature") || "";
-    const PAYSTACK_SECRET_KEY = process.env.PAYSTACK_TEST_SECRET_KEY || "";
+    const PAYSTACK_SECRET_KEY = process.env.PAYSTACK_SECRET_KEY || "";
 
     // 1. SECURITY: Strict Signature Check
     const hmac = crypto.createHmac("sha512", PAYSTACK_SECRET_KEY).update(raw).digest("hex");
