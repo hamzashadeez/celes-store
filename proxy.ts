@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { verifyJwt } from "./helpers/jwt";
 
-const protectedPages = ["/dashboard"];
 
 interface CustomNextRequest extends NextRequest {
   user: any;
@@ -24,6 +23,7 @@ export async function proxy(req: CustomNextRequest) {
 
 
     if (decoded) {
+      console.log(decoded)
       if (req.nextUrl.pathname.startsWith("/auth/login")) {
         return NextResponse.redirect(new URL("/", req.url));
       }

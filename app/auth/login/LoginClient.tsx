@@ -28,9 +28,13 @@ function LoginClient({ className, ...props }: React.ComponentProps<"div">) {
       email: values.email,
       password: values.password,
     })
-      .then(function (response) {
+      .then(function (response: any) {
         toast.success("Logged in Successfully");
-        router.push("/dashboard");
+        if(response?.user?.role === "admin"){
+          router.push("/dashboard");
+        }else{
+          router.push("/");
+        }
       })
       .catch(function (error) {
         console.log(error?.response?.data?.error);

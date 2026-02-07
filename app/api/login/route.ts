@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invalid Password" }, { status: 401 });
     }
 
-    const token = await signJwt({ id: existingUser.id });
+    const token = await signJwt({ id: existingUser.id, role: existingUser.role });
     console.log(token);
     // Return response with token
     const response = NextResponse.json(
