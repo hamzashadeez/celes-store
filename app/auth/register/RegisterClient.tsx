@@ -65,9 +65,11 @@ function RegisterClient({ className, ...props }: React.ComponentProps<"div">) {
               <Form className="p-6">
                 <FieldGroup>
                   <div className="flex flex-col items-center gap-2 text-center">
-                    <span className="text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    <img src="/logo.png" className="w-36 -my-12 " alt="" />
+                    <span className="text-xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                       Celes Electronic Store
                     </span>
+                  
                     <p className="text-muted-foreground text-balance mb-0">
                       Register a new Celes account
                     </p>
@@ -152,13 +154,13 @@ function RegisterClient({ className, ...props }: React.ComponentProps<"div">) {
                     </div>
                   </Field>
                   <Field>
-                    <button
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all"
+                    <Button
+                      // className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all"
                       type="submit"
                       disabled={isSubmitting ? true : false}
                     >
                       {isSubmitting ? "Loading..." : "Register"}
-                    </button>
+                    </Button>
                   </Field>
 
                   <FieldDescription className="text-center">

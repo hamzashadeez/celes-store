@@ -72,7 +72,7 @@ export default function Home() {
       </header>
 
       {/* MAIN: light panel for products to match design */}
-      <main className="container mx-auto px-6 md:px-12">
+      <main className="container mx-auto">
         <div className=" rounded-lg p-6">
           <ProductsBanner />
         </div>

@@ -38,14 +38,7 @@ export function Header() {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <form className="gap-2 hidden md:flex">
-            <Input required placeholder="Search Products..." />
-            <Button className="text-xs py-2 bg-[#FCA311] text-black font-semibold">
-              <Search />
-              Search
-            </Button>
-          </form>
+         
 
           {/* Desktop Actions */}
           {user === null && (
@@ -65,10 +58,10 @@ export function Header() {
 
           {user && (
             <div className="hidden md:flex  gap-3 items-center ">
-              <div className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full">
-                <User2 size={16} />
+              <div className="flex items-center justify-center w-10 h-10 bg-black rounded-full">
+                <User2 size={16} className="text-primary" />
               </div>
-              <h1 className="capitalize font-semibold ">{user?.name}</h1>
+              <h1 className="capitalize font-semibold text-primary">{user?.name}</h1>
             </div>
           )}
           {/* Mobile Menu Button */}
@@ -109,10 +102,10 @@ export function Header() {
               )}
               {user && (
                 <div className="flex mt-3 gap-3 items-center ">
-                  <div className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full">
+                  <div className="flex items-center justify-center w-10 h-10 bg-black rounded-full">
                     <User2 size={16} />
                   </div>
-                  <h1 className="capitalize font-semibold ">{user?.name}</h1>
+                  <h1 className="capitalize font-semibold text-primary ">{user?.name}</h1>
                 </div>
               )}
             </nav>
