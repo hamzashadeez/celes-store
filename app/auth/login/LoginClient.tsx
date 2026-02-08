@@ -30,7 +30,8 @@ function LoginClient({ className, ...props }: React.ComponentProps<"div">) {
     })
       .then(function (response: any) {
         toast.success("Logged in Successfully");
-        if(response?.user?.role === "admin"){
+        console.log(response.data?.user.role)
+        if(response.data?.user.role === "admin"){
           router.push("/dashboard");
         }else{
           router.push("/");
