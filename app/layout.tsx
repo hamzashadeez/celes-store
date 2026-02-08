@@ -23,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        <Header />
-        <div className="h-[calc(100vh-70px)] bg-white">
+        {/* <Header /> [calc(100vh-70px)]*/}
+        <div className="h-screen bg-[#14213D]">
         {children}
 
         </div>

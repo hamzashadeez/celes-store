@@ -23,6 +23,11 @@ export async function proxy(req: CustomNextRequest) {
 
 
     if (decoded) {
+      
+      if (req.nextUrl.pathname.startsWith("/dashboard") && decoded.role === "user") {
+        return NextResponse.redirect(new URL("/", req.url));
+
+      }
       console.log(decoded)
       if (req.nextUrl.pathname.startsWith("/auth/login")) {
         return NextResponse.redirect(new URL("/", req.url));

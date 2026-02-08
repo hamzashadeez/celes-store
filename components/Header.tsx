@@ -26,7 +26,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 h-[70px]">
+    <header className="bg-[#14213D] shadow-sm sticky top-0 z-50 h-[70px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -88,7 +88,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
+          <div className="md:hidden py-4 border-t bg-white px-6 border-gray-100">
             <form className="gap-2 flex flex-col">
               <Input required placeholder="Search Products..." />
               <Button className="text-xs py-2 bg-indigo-600">
